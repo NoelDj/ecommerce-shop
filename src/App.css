@@ -1,0 +1,46 @@
+.app {
+  display: grid;
+  padding: 2em;
+  grid-gap: 2em;
+  font-family: poppins;
+}
+
+.app > * {
+  border: 1px solid black;
+  padding: 1em;
+}
+
+nav {
+  grid-column: 1/-1;
+}
+
+h1 {
+  grid-column: 1/-1;
+}
+
+
+main {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
+  grid-gap: 2em;
+}
+
+article {
+  padding: 1em;
+}
+
+button {
+  grid-column: 1/-1;
+  padding: 2em;
+  background: #1e99e6;
+  color: #fff;
+  font-weight: 500;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+  .app {
+    grid-template-columns: 2fr 1fr;
+  }
+}
